@@ -1,0 +1,18 @@
+<div class="alert alert-success" *ngIf='message'>{{ message }}</div>
+<div class="col-md-4 offset-4 mt-4" *ngFor='let product of products'>
+    <div class="card">
+        <div class="card-body">
+            <img [src]="product.imageUrl" alt="" width="100%" height="250px">
+            <p>{{product.productname}}</p>
+            <p>{{product.price}}</p>
+            <p>{{product.description}}</p>
+            <button class="btn btn-outline-dark-primary" (click)='selectProduct(product)'>
+                UPDATE
+            </button>
+            <button class="btn btn-outline-dark float-right" (click)='deleteProduct(product)'>
+                DELETE
+            </button>
+            
+        </div>
+    </div>
+</div>
